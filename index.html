@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Щербина Сергій — сайт-візитка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f7; --surface:#ffffff; --ink:#101a33; --muted:#4d5878; --line:#d5dbea; --accent:#2f54f5; --on-accent:#ffffff; --chip:#e3e9fb;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0b1020; --surface:#141b33; --ink:#eef1fb; --muted:#a3adcd; --line:#27304f; --accent:#7f98ff; --on-accent:#0b1020; --chip:#1d2750; color-scheme:dark;}
+}
+:root[data-theme="dark"]{--bg:#0b1020; --surface:#141b33; --ink:#eef1fb; --muted:#a3adcd; --line:#27304f; --accent:#7f98ff; --on-accent:#0b1020; --chip:#1d2750; color-scheme:dark;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;padding:clamp(20px,6vw,72px) 20px}
+main{max-width:720px;margin:0 auto}
+.mono{width:84px;height:84px;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-family:"Unbounded",system-ui,sans-serif;font-weight:700;font-size:28px;border-radius:20px 20px 20px 4px;margin-bottom:28px}
+h1{font-family:"Unbounded",system-ui,sans-serif;font-weight:700;font-size:clamp(34px,8vw,60px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+.role{font-size:18px;color:var(--muted);margin:0;max-width:56ch}
+.bio{font-size:17px;margin:40px 0 20px;max-width:62ch}
+.chips{list-style:none;padding:0;margin:0 0 48px;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{background:var(--chip);padding:6px 14px;border-radius:999px;font-weight:500;font-size:15px}
+h2{font-family:"Unbounded",system-ui,sans-serif;font-weight:500;font-size:18px;margin:0 0 8px}
+.contacts{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.contacts li+li{border-top:1px solid var(--line)}
+.contacts a{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 20px;color:var(--ink);text-decoration:none}
+.contacts a:hover{background:var(--chip)}
+.contacts a:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.contacts .k{color:var(--muted)}
+.contacts .v{font-weight:600;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+  <div class="mono" aria-hidden="true">СЩ</div>
+  <h1>Щербина Сергій</h1>
+  <p class="role">Студент спеціальності 121 «Інженерія програмного забезпечення», ХНТУ</p>
+  <p class="bio">Привіт! Я навчаюся на 1 курсі спеціальності «Інженерія програмного забезпечення» в Херсонському національному технічному університеті. Окрім веб-технологій, розробляю прикладні програми, ботів та проєкти з використанням об'єктно-орієнтованого програмування (ООП), а також працюю із системою контролю версій Git.</p>
+  <ul class="chips" aria-label="Напрямки розробки">
+    <li>ООП</li><li>Розробка ПЗ</li><li>Боти</li><li>Веб-технології</li><li>Git</li>
+  </ul>
+  <h2>Контакти</h2>
+  <ul class="contacts">
+    <li><a href="mailto:hotdeveloper.ks@gmail.com"><span class="k">Email</span><span class="v">hotdeveloper.ks@gmail.com</span></a></li>
+    <li><a href="https://github.com/username"><span class="k">GitHub</span><span class="v">github.com/username</span></a></li>
+    <li><a href="https://t.me/username"><span class="k">Telegram</span><span class="v">@username</span></a></li>
+  </ul>
+</main>
+</body>
+</html>
